@@ -7,24 +7,72 @@
 </head>
 
 <body>
+
   <div class="header">
-    <img
-      src=""
-      alt="Logo" class="img">
     <h1 id="title">Twiddler</h1>
+    <img src="https://icon-library.net//images/twitter-black-and-white-icon/twitter-black-and-white-icon-23.jpg" alt="Logo" class="img">
+    <br>
   </div>
 
   <div class="buttons">
     <button id="newTweet" type="button" class="btn-type">Display New Tweet</button>
     <button id="clearTweets" type="button" class="btn-type">Clear Tweets</button>
-    <input type="text" name="MyTweet" value="What's Tweeting?" class="btn-type"><br>
-    <input type="submit" value="Submit" id="submit-btn" class="btn-type">
   </div>
 
   <!-- display tweet button row -->
   <div class="row">
-    <div class="column middle" id="tweet-holder"></div>
+    <div class="column" id="tweets"></div>
   </div>
+
+  <style>
+    .img {
+      max-width: 10%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .tweet {
+      border: 2px solid #2b8fc3;
+      border-radius: 15px;
+      padding: 5px 5px 5px 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      margin-left: 5px;
+      background-color: black;
+      color: #2b8fc3;
+    }
+  
+    .column {
+      margin-left: auto;
+      margin-right: auto;
+      width: 33.33%
+    }
+  
+    .buttons {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+      margin: 5px 5px 5px 5px;
+    }
+  
+    #title {
+      color: black;
+      display: block;
+      text-align: center;
+      text-shadow: 2px 2px 8px #2b8fc3;
+      ;
+    }
+  
+    #newTweet {
+      display: inline-block;
+    }
+  
+    #clearTweets {
+      display: inline-block;
+    }
+  </style>
 
 
   <script>
@@ -32,7 +80,7 @@
     $(document).ready(function () {
       var $body = $('body');
       // $body.html('');
-      var $tweetHolder = $('#tweet-holder');
+      var $tweetHolder = $('#tweets');
       var currentTweets = [];
       
       //Random Tweets
@@ -40,7 +88,8 @@
       $("#newTweet").click(function () {
         var tweet = streams.home[index];
         var $tweet = $(`<div class='tweet ${tweet.user}'></div>`);
-        $tweet.text('@' + tweet.user + ': ' + tweet.message + '-----' + tweet.created_at);
+        // Add time stamp to text
+        $tweet.text('@' + tweet.user + ': ' + tweet.message + ' --- ' + tweet.created_at);
         $tweet.prependTo($tweetHolder);
         index -= 1;
         currentTweets.push(tweet);
@@ -50,23 +99,23 @@
       })
 
       // Using hide() to hide other tweets from user not selected
-      $('#tweet-holder').on("click", ".shawndrost", function () {
+      $('#tweets').on("click", ".shawndrost", function () {
         $(".sharksforcheap").hide();
         $(".mracus").hide();
         $(".douglascalhoun").hide();
       })
 
-      $('#tweet-holder').on("click", ".sharksforcheap", function () {
+      $('#tweets').on("click", ".sharksforcheap", function () {
         $(".shawndrost").hide();
         $(".mracus").hide();
         $(".douglascalhoun").hide();
       })
-      $('#tweet-holder').on("click", ".mracus", function () {
+      $('#tweets').on("click", ".mracus", function () {
         $(".sharksforcheap").hide();
         $(".shawndrost").hide();
         $(".douglascalhoun").hide();
       })
-      $('#tweet-holder').on("click", ".douglascalhoun", function () {
+      $('#tweets').on("click", ".douglascalhoun", function () {
         $(".sharksforcheap").hide();
         $(".mracus").hide();
         $(".shawndrost").hide();
@@ -74,10 +123,6 @@
     })
 
   </script>
-
- 
-
-
 
 </body>
 
