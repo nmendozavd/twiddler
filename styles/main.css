@@ -1,0 +1,49 @@
+
+    .img {
+      max-width: 10%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .tweet {
+      border: 2px solid #2b8fc3;
+      border-radius: 15px;
+      padding: 5px 5px 5px 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      margin-left: 5px;
+      background-color: black;
+      color: #2b8fc3;
+    }
+  
+    .column {
+      margin-left: auto;
+      margin-right: auto;
+      width: 33.33%
+    }
+  
+    .buttons {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+      margin: 5px 5px 5px 5px;
+    }
+  
+    #title {
+      color: black;
+      display: block;
+      text-align: center;
+      text-shadow: 2px 2px 8px #2b8fc3;
+      ;
+    }
+  
+    #newTweet {
+      display: inline-block;
+    }
+  
+    #clearTweets {
+      display: inline-block;
+    }
+ 
