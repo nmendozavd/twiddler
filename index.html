@@ -4,13 +4,14 @@
 <head>
   <script src="jquery.js"></script>
   <script src="data_generator.js"></script>
+  <link rel = "stylesheet" href="styles/main.css" type="text/css">
 </head>
 
 <body>
 
   <div class="header">
     <h1 id="title">Twiddler</h1>
-    <img src="https://icon-library.net//images/twitter-black-and-white-icon/twitter-black-and-white-icon-23.jpg" alt="Logo" class="img">
+    <img src="https://icon-library.net//images/twitter-black-and-white-icon/twitter-black-and-white-icon-23.jpg" alt="logo" class="img">
     <br>
   </div>
 
@@ -23,57 +24,6 @@
   <div class="row">
     <div class="column" id="tweets"></div>
   </div>
-
-  <style>
-    .img {
-      max-width: 10%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    .tweet {
-      border: 2px solid #2b8fc3;
-      border-radius: 15px;
-      padding: 5px 5px 5px 5px;
-      margin-top: 5px;
-      margin-bottom: 5px;
-      margin-right: 5px;
-      margin-left: 5px;
-      background-color: black;
-      color: #2b8fc3;
-    }
-  
-    .column {
-      margin-left: auto;
-      margin-right: auto;
-      width: 33.33%
-    }
-  
-    .buttons {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 20px;
-      margin: 5px 5px 5px 5px;
-    }
-  
-    #title {
-      color: black;
-      display: block;
-      text-align: center;
-      text-shadow: 2px 2px 8px #2b8fc3;
-      ;
-    }
-  
-    #newTweet {
-      display: inline-block;
-    }
-  
-    #clearTweets {
-      display: inline-block;
-    }
-  </style>
-
 
   <script>
     // jQuery ready function
